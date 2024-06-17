@@ -3,7 +3,16 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root{
-    --text-color: red;
+    --branco: #FFFFFF;
+	--preto:#000000;
+    --background-color: #262626;
+	--border: 4px solid #2271D1;
+	--boxShadow: 0px 5px 29px 0px #2271D1B2;
+
+}
+
+*{
+    box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -33,6 +42,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    background-color: var(--background-color);
+	color: var(--branco);
 }
 ol, ul {
 	list-style: none;
