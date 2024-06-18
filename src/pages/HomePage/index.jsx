@@ -1,7 +1,13 @@
+import Banner from "../../components/Banner"
+import GamesContainer from "../../components/GamesContainer"
+
 
 const HomePage = () =>{
     return(
-        <p>Hello I am the Home Page</p>        
+        <>
+            <Banner />
+            <GamesContainer />   
+        </>
     )
 }
 
