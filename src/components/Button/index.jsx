@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const StyleButton = styled.button`
+const StyledButton = styled.button`
     width: 180px;
     height: 54px;
     background-color: transparent;
@@ -22,11 +22,11 @@ const StyleButton = styled.button`
 
 
 const Button = ({children, isActive}) => {
-
+    
     return(
-        <StyleButton className={isActive?"active":""}>
+        <StyledButton className={isActive?"active":""}>
             {children}
-        </StyleButton>
+        </StyledButton>
     )
 }
 

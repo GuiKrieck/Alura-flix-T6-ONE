@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import deleteIcon from "./delete-icon.png"
 import editIcon from "./edit-icon.png"
+import { useGamesContext } from "../../context/Games"
 
 const StyledGameCard = styled.div`
     max-width: 390px;
@@ -48,6 +49,7 @@ const StyledCardButton = styled.button`
 `
 
 const GameCard = ({color, game}) => {
+    const gamesContext = useGamesContext()
     return(
         <StyledGameCard >
             <StyledGameImage $color={color} $bgImage={game.cover}/>
@@ -56,7 +58,7 @@ const GameCard = ({color, game}) => {
                     <img src={deleteIcon} alt="botão deletar video" />
                     DELETAR
                 </StyledCardButton>
-                <StyledCardButton>
+                <StyledCardButton onClick={() => gamesContext.editCard(game)}>
                     <img src={editIcon} alt="botão editar video" />
                     EDITAR
                 </StyledCardButton>
