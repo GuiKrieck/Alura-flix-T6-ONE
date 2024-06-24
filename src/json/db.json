@@ -1,66 +1,66 @@
 {
-    "games":[
-        {
-            "id": 1,
-            "title": "Papers Please",
-            "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239030/header.jpg?t=1678266428",
-            "link": "https://www.youtube.com/embed/DmqkpRaSg2g?si=LgIy7URA2-N9Rpr8",
-            "system": "PC",
-            "description": "Congratulações. A loteria de outubro foi concluída. Seu nome foi selecionado.Compareça ao Ministério da Admissão no Posto da Fronteira de Grestin para relocação imediata.Um apartamento será providenciado para você e sua família em Grestin Leste.Glória à Arstotzka."
-        },
-        {
-            "id": 2,
-            "title": "The House of the Dead Remake",
-            "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1694600/header.jpg?t=1691049548",
-            "link": "https://www.youtube.com/embed/watch?v=eYFVQaqpFQc",
-            "system": "Nintendo Switch",
-            "description": "THE HOUSE OF THE DEAD: Remake é uma versão remodelada de um jogo de 1997. um jogo de tiro classico de arcade recebe mudanças na gameplay para se enquadrar nos padrões de jogos atuais."
-        },
-        {
-            "id": 3,
-            "title": "Mega Man 11",
-            "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/742300/header.jpg?t=1701220165",
-            "link": "https://www.youtube.com/watch?v=FVSvd7Qnkq0",
-            "system": "Nintendo Switch",
-            "description": "Mega Man está de volta à ação! A mais nova entrada na série que vendeu milhões mistura a clássica desafiadora ação de plataforma 2D com um novo estilo visual. O novo sistema de equipamento duplo adiciona uma novidade à satisfatória jogabilidade pela qual a série é conhecida."
-        },
-        {
-            "id": 4,
-            "title": "God of War III Remastered",
-            "cover": "https://image.api.playstation.com/vulcan/img/rnd/202010/2917/oqIXDTKAcEOwAPzM7GhEZ0rW.jpg",
-            "link": "https://www.youtube.com/watch?v=4z93rQGZP1Y",
-            "system": "PlayStation 4",
-            "description": "God of War III Remasterizado é o jogo para um jogador aclamado pela crítica que permite ao jogador assumir o papel do destemido ex-guerreiro espartano Kratos, em sua ascensão das profundezas obscuras de Hades para escalar as altitudes do Monte Olimpo e buscar sua vingança sangrenta contra aqueles que o traíram."
-        },
-        {
-            "id": 5,
-            "title": "Fable Anniversary",
-            "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/288470/header.jpg?t=1577393306",
-            "link": "https://www.youtube.com/watch?v=cQwFCnibkhM&t=11s",
-            "system": "PC",
-            "description": "Para cada escolha uma consequencia. Totalmente Remasterizado com visuais HD, Fable Anniversary é uma incrível recaptulação do jogo original that vai agradar os fans e novos jogadores! A nova dificuldade heróica vai testar a fervor até os jogadores mais aficcionados. "
-        } 
-    ],
-    "categories":[
-        {
-            "id":1,
-            "system":"PC",
-            "color":"#6BD1FF"
-        },
-        {
-            "id":2,
-            "system":"Nintendo Switch",
-            "color":"#00C86F"
-        },
-        {
-            "id":3,
-            "system":"PlayStation 4",
-            "color":"#FFBA05"
-        },
-        {
-            "id":4,
-            "system":"Sega DreamCast",
-            "color":"#85FFAC"
-        }
-    ]
+  "games": [
+    {
+      "id": 1,
+      "title": "Papers Please",
+      "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239030/header.jpg?t=1678266428",
+      "link": "https://www.youtube.com/embed/DmqkpRaSg2g?si=LgIy7URA2-N9Rpr8",
+      "system": "PC",
+      "description": "Congratulações. A loteria de outubro foi concluída. Seu nome foi selecionado.Compareça ao Ministério da Admissão no Posto da Fronteira de Grestin para relocação imediata.Um apartamento será providenciado para você e sua família em Grestin Leste.Glória à Arstotzka."
+    },
+    {
+      "id": 2,
+      "title": "The House of the Dead Remake",
+      "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1694600/header.jpg?t=1691049548",
+      "link": "https://www.youtube.com/embed/watch?v=eYFVQaqpFQc",
+      "system": "Nintendo Switch",
+      "description": "THE HOUSE OF THE DEAD: Remake é uma versão remodelada de um jogo de 1997. um jogo de tiro classico de arcade recebe mudanças na gameplay para se enquadrar nos padrões de jogos atuais."
+    },
+    {
+      "title": "Mega Man 11",
+      "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/742300/header.jpg?t=1701220165",
+      "link": "https://www.youtube.com/watch?v=FVSvd7Qnkq0",
+      "system": "Nintendo Switch",
+      "description": "Mega Man está de volta à ação! A mais nova entrada na série que vendeu milhões mistura a clássica desafiadora ação de plataforma 2D com um novo estilo visual. O novo sistema de equipamento duplo adiciona uma novidade à satisfatória jogabilidade pela qual a série é conhecida.",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "title": "God of War III Remastered",
+      "cover": "https://image.api.playstation.com/vulcan/img/rnd/202010/2917/oqIXDTKAcEOwAPzM7GhEZ0rW.jpg",
+      "link": "https://www.youtube.com/watch?v=4z93rQGZP1Y",
+      "system": "PlayStation 4",
+      "description": "God of War III Remasterizado é o jogo para um jogador aclamado pela crítica que permite ao jogador assumir o papel do destemido ex-guerreiro espartano Kratos, em sua ascensão das profundezas obscuras de Hades para escalar as altitudes do Monte Olimpo e buscar sua vingança sangrenta contra aqueles que o traíram."
+    },
+    {
+      "title": "Fable Anniversary",
+      "cover": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/288470/header.jpg?t=1577393306",
+      "link": "https://www.youtube.com/watch?v=cQwFCnibkhM&t=11s",
+      "system": "PC",
+      "description": "Para cada escolha uma consequencia. Totalmente Remasterizado com visuais HD, Fable Anniversary é uma incrível recaptulação do jogo original that vai agradar os fans e novos jogadores! A nova dificuldade heróica vai testar a fervor até os jogadores mais aficcionados. ",
+      "id": 5
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "system": "PC",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": 2,
+      "system": "Nintendo Switch",
+      "color": "#00C86F"
+    },
+    {
+      "id": 3,
+      "system": "PlayStation 4",
+      "color": "#FFBA05"
+    },
+    {
+      "id": 4,
+      "system": "Sega DreamCast",
+      "color": "#85FFAC"
+    }
+  ]
 }

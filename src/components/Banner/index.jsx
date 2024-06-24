@@ -19,8 +19,11 @@ const StyledBanner = styled.div`
         background-position: center;
         border: 4px solid #6BD1FF;
         cursor: pointer;
-        >div{
+        div{
+            display: flex;
+            flex-direction: column;
             width: 100%;
+
         }
         h3{
             font-family: "Roboto", sans-serif;
@@ -36,6 +39,8 @@ const StyledBanner = styled.div`
         }
         img{
             width: 100%;
+            max-width: 300px;
+            align-self: center;
         }
     }
 `
@@ -48,7 +53,8 @@ const Banner = () =>{
         return null; 
     }
 
-    const bannerGame = games[Math.floor(Math.random() * games.length)]
+    const randomNumber = Math.floor(Math.random() * (games.length))
+    const bannerGame = games[randomNumber]
     const bannerGameCategory = categories.filter((category) => category.system === bannerGame.system)
     const categoryColor = bannerGameCategory[0].color
     

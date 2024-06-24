@@ -54,7 +54,7 @@ const GameCard = ({color, game}) => {
         <StyledGameCard >
             <StyledGameImage $color={color} $bgImage={game.cover}/>
             <StyledCardButtonsContainer $color={color}>
-                <StyledCardButton>
+                <StyledCardButton onClick={() => gamesContext.deleteGame(game)}>
                     <img src={deleteIcon} alt="botão deletar video" />
                     DELETAR
                 </StyledCardButton>

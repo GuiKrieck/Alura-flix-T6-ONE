@@ -61,22 +61,20 @@ const Form = ({method, game}) =>{
     function formSubmit(event){
         event.preventDefault()
         gameContext.editCard(null)
+        const newGame = {
+            "title":gameTitle,
+            "cover":gameCover,
+            "link":gameVideo,
+            "system":gameSystem,
+            "description":gameDescription
+        }
         
         if (game){
-            console.log("veio da modal")
-            console.log(game.id)
-            console.log(gameTitle)
-            console.log(gameSystem)
-            console.log(gameCover)
-            console.log(gameVideo)
-            console.log(gameDescription)
+            newGame.id = game.id
+            gameContext.updateGame(newGame)
         }else{
-            console.log("veio do new video")
-            console.log(gameTitle)
-            console.log(gameSystem)
-            console.log(gameCover)
-            console.log(gameVideo)
-            console.log(gameDescription)
+            gameContext.addGame(newGame)
+
         }
     }
 
