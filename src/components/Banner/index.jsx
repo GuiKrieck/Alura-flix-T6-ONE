@@ -44,9 +44,14 @@ const Banner = () =>{
     const games = useGamesContext().games
     const categories = useGamesContext().categories
 
+    if (games.length === 0 || categories.length === 0) {
+        return null; 
+    }
+
     const bannerGame = games[Math.floor(Math.random() * games.length)]
     const bannerGameCategory = categories.filter((category) => category.system === bannerGame.system)
     const categoryColor = bannerGameCategory[0].color
+    
     return(
         <StyledBanner $cover={bannerGame.cover}> 
             <div>

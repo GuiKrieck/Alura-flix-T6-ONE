@@ -61,6 +61,23 @@ const Form = ({method, game}) =>{
     function formSubmit(event){
         event.preventDefault()
         gameContext.editCard(null)
+        
+        if (game){
+            console.log("veio da modal")
+            console.log(game.id)
+            console.log(gameTitle)
+            console.log(gameSystem)
+            console.log(gameCover)
+            console.log(gameVideo)
+            console.log(gameDescription)
+        }else{
+            console.log("veio do new video")
+            console.log(gameTitle)
+            console.log(gameSystem)
+            console.log(gameCover)
+            console.log(gameVideo)
+            console.log(gameDescription)
+        }
     }
 
     function clearFields(){

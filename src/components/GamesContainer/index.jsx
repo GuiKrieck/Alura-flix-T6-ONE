@@ -16,6 +16,10 @@ const GamesContainer = () =>{
     const categories = useGamesContext().categories
     const games = useGamesContext().games
 
+    if (games.length === 0 || categories.length === 0) {
+        return null; 
+    }
+
     return(
         <StyledGamesContainer>
             {categories.map((category) => (
