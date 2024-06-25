@@ -2,6 +2,7 @@ import styled from "styled-components"
 import deleteIcon from "./delete-icon.png"
 import editIcon from "./edit-icon.png"
 import { useGamesContext } from "../../context/Games"
+import { Link } from "react-router-dom"
 
 const StyledGameCard = styled.div`
     max-width: 390px;
@@ -52,7 +53,9 @@ const GameCard = ({color, game}) => {
     const gamesContext = useGamesContext()
     return(
         <StyledGameCard >
-            <StyledGameImage $color={color} $bgImage={game.cover}/>
+            <Link to={`/${game.id}`}>
+                <StyledGameImage $color={color} $bgImage={game.cover}/>
+            </Link>
             <StyledCardButtonsContainer $color={color}>
                 <StyledCardButton onClick={() => gamesContext.deleteGame(game)}>
                     <img src={deleteIcon} alt="botão deletar video" />

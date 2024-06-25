@@ -34,6 +34,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
+	color: var(--branco);
 }
 
 article, aside, details, figcaption, figure, 
@@ -41,9 +43,12 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	display: flex;
+	flex-direction: column;
 	line-height: 1;
     background-color: var(--background-color);
 	color: var(--branco);
+	min-height: 100vh;
 }
 ol, ul {
 	list-style: none;

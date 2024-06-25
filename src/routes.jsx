@@ -1,24 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import GlobalStyle from "./components/GlobalStyle/GlobalStyles"
-import Header from "./components/Header"
 import HomePage from "./pages/HomePage"
 import NewVideo from "./pages/NewVideo"
-import GamesProvider from "./context/Games"
-import Footer from "./components/Footer"
+import Player from "./pages/Player"
+import NotFound from "./pages/NotFound"
+import BasePage from "./pages/BasePage"
 
 
 function AppRoutes() {
     return (
         <BrowserRouter>
-            <GlobalStyle />
-            <Header />
-                <GamesProvider>
-                    <Routes>
-                        <Route path="/" element={<HomePage />}></Route>
-                        <Route path="/NewVideo" element={<NewVideo />}></Route>
-                    </Routes>
-                </GamesProvider>
-            <Footer />
+             <Routes>
+                <Route path="/"  element={<BasePage />}>
+                    <Route index element={<HomePage />}></Route>
+                    <Route path="newvideo" element={<NewVideo />}></Route>
+                    <Route path=":id" element={<Player />}></Route>
+                    <Route path="*" element={<NotFound />}></Route>
+                </Route>
+            </Routes>
         </BrowserRouter>
     )
 }

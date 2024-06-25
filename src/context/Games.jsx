@@ -9,7 +9,6 @@ GamesContext.displayName = 'Games'
 
 export default function GamesProvider({children}) {
 
-
     const [games, setGames] = useState([])
     
     useEffect(() =>{
@@ -43,6 +42,7 @@ export function useGamesContext(){
     const{selectedVideo, setSelectedVideo} = useContext(GamesContext)
 
     function editCard(game){
+        window.scrollTo(0,350)
         setSelectedVideo(game)
     }
 
@@ -84,6 +84,7 @@ export function useGamesContext(){
             .then(() =>{
                 setGames(games.filter((thisGame) => thisGame.id !== game.id))
             })
+            .catch(() => alert("Houve um problema ao deletar o jogo. Tente novamente"))
     }
 
     return{

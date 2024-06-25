@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import styled from "styled-components"
 import Button from "../Button"
+import homeIcon from "/images/home.png"
+import newVideoIcon from "/images/new-video.png"
 
 const StyledNavDiv = styled.div`
     display: flex;
@@ -33,21 +35,30 @@ const NavItem = ({url, image, activeImage, children, reverse}) => {
  
     return(
         screenSize <= 1024
-        ?   <StyledNavDiv style={reverse ? {flexDirection: "row-reverse"} : {flexDirection: "row" }}>  
-                <p>
-                    <img src={activeImage} />
-                    {children}
-                </p>
-                <Link to={url}>
-                    <img src={image}/>                      
-                </Link>
+        ?  (activeRoute === "/" || activeRoute ==="/newvideo")
+                ? <StyledNavDiv style={reverse ? {flexDirection: "row-reverse"} : {flexDirection: "row" }}>  
+                    <p>
+                        <img src={activeImage} />
+                        {children}
+                    </p>
+                    <Link to={url}>
+                        <img src={image}/>                      
+                    </Link>
+                </StyledNavDiv>
+                : <StyledNavDiv>  
+                    <Link to={"/"}>
+                        <img src={homeIcon}/>                      
+                    </Link>
+                    <Link to={"/newvideo"}>
+                        <img src={newVideoIcon}/>                      
+                    </Link>
             </StyledNavDiv>
         :   <StyledNavDiv>
                 <Link to="/">
                     <Button isActive={activeRoute === "/" ? true : false}>HOME</Button>
                 </Link>
-                <Link to="NewVideo">
-                    <Button isActive={activeRoute === "/NewVideo" ? true : false}>NEW VIDEO</Button>
+                <Link to="newvideo">
+                    <Button isActive={activeRoute === "/newvideo" ? true : false}>NOVO VIDEO</Button>
                 </Link>
             </StyledNavDiv>
     )

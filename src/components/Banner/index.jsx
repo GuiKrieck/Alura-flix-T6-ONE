@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { useGamesContext } from "../../context/Games";
 import CategoryTitle from "../CategoryTitle";
+import { Link } from "react-router-dom";
 
 const StyledBanner = styled.div`
     display: none;
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px){ 
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -59,16 +60,18 @@ const Banner = () =>{
     const categoryColor = bannerGameCategory[0].color
     
     return(
-        <StyledBanner $cover={bannerGame.cover}> 
-            <div>
-                <CategoryTitle color={categoryColor}>{bannerGame.system}</CategoryTitle>
-                <h3>{bannerGame.title}</h3>
-                <p>{bannerGame.description}</p>
-            </div>
-            <div>
-                <img src={bannerGame.cover} alt={bannerGame.title} />
-            </div>
-        </StyledBanner>
+        <Link to={`/${bannerGame.id}`}>
+            <StyledBanner $cover={bannerGame.cover}>
+                <div>
+                        <CategoryTitle color={categoryColor}>{bannerGame.system}</CategoryTitle>
+                        <h3>{bannerGame.title}</h3>
+                        <p>{bannerGame.description}</p>
+                </div>
+                <div>
+                    <img src={bannerGame.cover} alt={bannerGame.title} />
+                </div>
+            </StyledBanner>
+        </Link>
     )
 }
 

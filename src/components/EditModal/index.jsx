@@ -14,7 +14,7 @@ const Overlay = styled.div`
 
 const StyledDialog = styled.dialog`
     position: absolute;
-    top: calc(100vh / 2);
+    top: 380px;
     left: 0%;
     width: 374px;
     background-color: #03122F;
@@ -41,17 +41,18 @@ const StyledMoldaTitle = styled.h2`
         margin: 0 auto 40px;
     }
 `
-    const StyledModalButton = styled.button`
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    `
+const StyledModalButton = styled.button`
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+`
 
 const EditModal = ({selectedCard}) => {
     const gameContext = useGamesContext()
+
 
     function closeModal(){
         gameContext.editCard(null)

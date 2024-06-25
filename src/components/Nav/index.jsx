@@ -26,7 +26,7 @@ const Nav = () => {
                         activeImage="/images/blue-new-video.png"
                         reverse={true}
                     >
-                        NEW VIDEO
+                        NOVO VIDEO
                     </NavItem>
             }
         </StyledNav>

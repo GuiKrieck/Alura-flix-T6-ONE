@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Nav from "../Nav"
+import { Link } from "react-router-dom"
 
 
 const StyledHeader = styled.header`
@@ -14,7 +15,7 @@ const StyledHeader = styled.header`
     bottom: 0;
     border-top: var(--border);
     box-shadow: var(--boxShadow);
-    >img{
+    >a>img{
         display: none;
     }
     @media screen and (min-width: 1024px){
@@ -22,7 +23,7 @@ const StyledHeader = styled.header`
         position: relative;
         border-top: none;
         border-bottom: var(--border);
-        >img{
+        >a>img{
             display: inline;
             width: 168px;
         }
@@ -34,10 +35,10 @@ const StyledHeader = styled.header`
 const Header = () =>{
     return(
         <StyledHeader>
-            <img src="/images/logo.png" alt="Logo do Aluraflix" />
-            <Nav>
-
-            </Nav>
+            <Link to={"/"}>
+                <img src="/images/logo.png" alt="Logo do Aluraflix" />
+            </Link>
+            <Nav/>
         </StyledHeader>
     )
 }
