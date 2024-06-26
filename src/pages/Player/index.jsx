@@ -7,20 +7,21 @@ const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
     gap: 32px;
     width: 100%;
-    height: 500px;
-    margin: 100px auto 0;
+    margin: 100px auto 120px;
+    min-height: 500px;
     >iframe{
         width: 90%;
         max-width: 816px;
-        height: 100%;
+        min-height: 320px;
+        flex: 1;
     }
     @media screen and (min-width: 1024px){
         margin-top: 25px;
+        margin-bottom: 0;
         padding: 50px;
-        height: calc(100vh - 255px);
+        height: calc(100vh - 250px);
     }
     `
 const StyledTitle = styled.h2`
@@ -45,7 +46,8 @@ const Player = () => {
     return(
         <StyledSection>
             <StyledTitle>{gameToShow.title}</StyledTitle>
-            <iframe 
+            <iframe
+                
                 src={gameToShow.link} 
                 title={gameToShow.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

@@ -7,7 +7,8 @@ const StyledSection = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 15%;
+    min-height: 500px;
+    margin-top: 20px;
     @media screen and (min-width: 1024px){
         flex-direction: row;
         height: calc(100vh - 245px);

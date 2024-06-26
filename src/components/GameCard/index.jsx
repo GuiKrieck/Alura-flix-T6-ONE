@@ -19,9 +19,20 @@ const StyledGameImage = styled.div`
     background: url(${(props) => props.$bgImage});
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border: 5px solid ${(props) => props.$color};
     border-radius: 4px 4px 0 0;
     box-shadow: 0px 0px 17px 8px ${(props) => props.$color} inset;
+`
+const StyledParagraph = styled.p`
+    text-align: center;
+    background-color: #000000;
+    border-left: 5px solid ${(props) => props.$color};
+    border-right: 5px solid ${(props) => props.$color};
+    font-family: "Roboto",sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 10px 0;
 `
 
 const StyledCardButtonsContainer = styled.div`
@@ -55,6 +66,7 @@ const GameCard = ({color, game}) => {
         <StyledGameCard >
             <Link to={`/${game.id}`}>
                 <StyledGameImage $color={color} $bgImage={game.cover}/>
+                <StyledParagraph $color={color}>{game.title}</StyledParagraph>
             </Link>
             <StyledCardButtonsContainer $color={color}>
                 <StyledCardButton onClick={() => gamesContext.deleteGame(game)}>

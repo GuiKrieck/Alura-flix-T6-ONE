@@ -76,6 +76,7 @@ const Form = ({method, game}) =>{
             gameContext.addGame(newGame)
 
         }
+        clearFields()
     }
 
     function clearFields(){

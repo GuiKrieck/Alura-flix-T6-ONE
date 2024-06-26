@@ -1,11 +1,15 @@
 import styled from "styled-components"
 import Form from "../../components/Form"
+import AddCategoryModal from "../../components/AddCategoryModal"
+import { useState } from "react"
+import { useGamesContext } from "../../context/Games"
 
 const StyledNewVideoContainer = styled.section`
     width: 100%;
     max-width: 1440px;
-    margin: 70px auto 120px;
+    margin: 90px auto 120px;
     padding: 0 10px;
+    position: sticky;
 `
 const StyledTitle = styled.h2`
     text-align: center;
@@ -43,8 +47,22 @@ const StyledSubTitle = styled.h3`
     border-bottom: 3px solid #393939;
     margin-bottom: 20px;
 `
+const StyledNewCategoryButton = styled.button`
+    position: absolute;
+    top: -80px;
+    right: 20px;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 1rem;
+` 
 
 const NewVideo= () => {
+
+    const gameContext = useGamesContext()
+
     return(
         <StyledNewVideoContainer>
             <StyledTitle> NOVO VÍDEO </StyledTitle>
@@ -53,7 +71,10 @@ const NewVideo= () => {
                 <StyledSubTitle>CRIAR VIDEO</StyledSubTitle>
                 <Form />
             </StyledFormContainer>
-
+            <StyledNewCategoryButton onClick={() => gameContext.categoryModal(true)}>
+                Nova Categoria
+            </StyledNewCategoryButton>
+            <AddCategoryModal />
         </StyledNewVideoContainer>
     )
 }

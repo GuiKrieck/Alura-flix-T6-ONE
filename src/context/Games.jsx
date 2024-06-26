@@ -28,9 +28,11 @@ export default function GamesProvider({children}) {
     },[])
     
     const [selectedVideo, setSelectedVideo] = useState(null)
+    const [isCategoryModalOpen, setIsCategoryModalOpen] = useState(false)
+    
     
     return (
-        <GamesContext.Provider value={{games, setGames, categories, setCategories, selectedVideo, setSelectedVideo}}>
+        <GamesContext.Provider value={{games, setGames, categories, setCategories, selectedVideo, setSelectedVideo,isCategoryModalOpen, setIsCategoryModalOpen}}>
             {children}
         </GamesContext.Provider>
     )
@@ -40,10 +42,15 @@ export function useGamesContext(){
     const{games, setGames} = useContext(GamesContext)
     const{categories, setCategories} = useContext(GamesContext)
     const{selectedVideo, setSelectedVideo} = useContext(GamesContext)
+    const{isCategoryModalOpen, setIsCategoryModalOpen} = useContext(GamesContext)
 
     function editCard(game){
-        window.scrollTo(0,350)
+        game ? window.scrollTo(0,350): ""
         setSelectedVideo(game)
+    }
+
+    function categoryModal(boolean){
+        setIsCategoryModalOpen(boolean)
     }
 
     function addGame(game){
@@ -87,14 +94,30 @@ export function useGamesContext(){
             .catch(() => alert("Houve um problema ao deletar o jogo. Tente novamente"))
     }
 
+    function addCategory(category){
+        axios
+            .post(categoriesApiUrl,{
+                "system":category.system,
+                "color":category.color,
+            })
+            .then((response)=>{
+                setCategories([...categories, response.data])
+                alert("Sistema Adicionado com Sucesso!")
+            })
+            .catch(() => alert("Houve um erro ao adicionar o Sistema, tente novamente!"))
+    }
+
     return{
         games,
         categories,
         selectedVideo,
+        isCategoryModalOpen,
+        categoryModal,
         editCard,
         addGame,
         updateGame,
-        deleteGame
+        deleteGame,
+        addCategory
     }
 }
 

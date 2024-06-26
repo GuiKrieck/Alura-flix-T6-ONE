@@ -1,7 +1,9 @@
-import styled from "styled-components"
-import { useGamesContext } from "../../context/Games"
-import Form from "../Form"
+import styled from "styled-components";
 import xButton from "/images/x-button.png"
+import { useState } from "react";
+import { useGamesContext } from "../../context/Games";
+import NewCategoryForm from "../NewCategoryForm";
+
 
 const Overlay = styled.div`
     background-color: #000000b2;
@@ -14,7 +16,7 @@ const Overlay = styled.div`
 
 const StyledDialog = styled.dialog`
     position: absolute;
-    top: 380px;
+    top: 0px;
     left: 0%;
     width: 374px;
     background-color: #03122F;
@@ -25,8 +27,7 @@ const StyledDialog = styled.dialog`
         width: 865px;
     }
 `
-
-const StyledMoldaTitle = styled.h2`
+const StyledMoldalTitle = styled.h2`
     width: 100%;
     margin-bottom: 40px;
     font-family: "Roboto", sans-serif;
@@ -50,23 +51,17 @@ const StyledModalButton = styled.button`
     cursor: pointer;
 `
 
-const EditModal = ({selectedCard}) => {
+const AddCategoryModal = () => {
     const gameContext = useGamesContext()
-
-
-    function closeModal(){
-        gameContext.editCard(null)
-    }
-
+    
     return (
-        selectedCard && 
+        gameContext.isCategoryModalOpen &&
         <>
-            <Overlay onClick={() => closeModal()} />
-            <StyledDialog onClose={() => closeModal()} open={!!selectedCard}>
-                <StyledMoldaTitle>EDITAR CARD :</StyledMoldaTitle>
-                <Form method="dialog" game={selectedCard}>
-                </Form>
-                <StyledModalButton onClick={() => closeModal()}>
+            <Overlay onClick={() => gameContext.categoryModal(false)} />
+            <StyledDialog onClose={() => gameContext.categoryModal(false)} open={!!open}>
+                <StyledMoldalTitle>Adicionar Sistema :</StyledMoldalTitle>
+                <NewCategoryForm />
+                <StyledModalButton onClick={() => gameContext.categoryModal(false)}>
                     <img src={xButton} alt="botão fechar" />
                 </StyledModalButton>
             </StyledDialog>
@@ -74,4 +69,4 @@ const EditModal = ({selectedCard}) => {
     )
 }
 
-export default EditModal
+export default AddCategoryModal
