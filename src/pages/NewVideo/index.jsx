@@ -72,7 +72,7 @@ const NewVideo= () => {
                 <Form />
             </StyledFormContainer>
             <StyledNewCategoryButton onClick={() => gameContext.categoryModal(true)}>
-                Nova Categoria
+                Novo Sistema
             </StyledNewCategoryButton>
             <AddCategoryModal />
         </StyledNewVideoContainer>
